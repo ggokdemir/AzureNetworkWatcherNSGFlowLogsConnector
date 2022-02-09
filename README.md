@@ -3,13 +3,6 @@ This is a forked version of the Microsoft AzureNetworkWatcherNSGFlowLogsConnecto
 [![Deploy to Azure](https://camo.githubusercontent.com/f880eed90750db7d23052ffb665803526cb46a59/68747470733a2f2f616b612e6d732f6465706c6f79746f617a757265627574746f6e)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FrySplunk%2FAzureNetworkWatcherNSGFlowLogsConnector%2Fmaster%2FNwNsgProject%2FazureDeploy.json)
 
 
-NOTE regarding the Event Hub output binding:  
-
-Native support for event hubs is not yet available, but would be the preferred method. If you use Splunk and prefer to send NSG flow logs to Splunk using event hub rather than HEC, the event hub output binding will do the job. In [Azure Monitor Addon For Splunk](https://github.com/Microsoft/AzureMonitorAddonForSplunk), configure the Azure Monitor Diagnostic Logs data input and add a line to ```TA-folder/bin/app/hubs.json``` similar to this:  
-
-Example: ```'insights-logs-nsgflowlogs': 'resourceId'```  
-
-When you create the hub (e.g. ```insights-logs-nsgflowlogs```) set the number of partitions to 4. This is mandatory.
 
 # Settings
 
